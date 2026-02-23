@@ -18,9 +18,9 @@ export default function Home() {
       nav: "NeoCliniQ",
       langToggle: "EN",
       heroTag: "Bientôt disponible",
-      heroTitle: "La gestion de clinique que vos patients méritent.",
+      heroTitle: "Reprenez le contrôle de votre temps. NeoCliniQ s'occupe du reste.",
       heroSubtitle:
-        "Remplacez GoRendezvous par une plateforme construite pour l'ère de l'IA. Plus rapide. Plus simple. Conçue pour la façon dont vous travaillez vraiment.",
+        "Fini les fins de journée à rattraper vos dossiers. NeoCliniQ automatise l'administratif pour que vous puissiez vous concentrer sur ce qui compte vraiment — vos patients.",
       heroCta: "Rejoindre la liste d'attente",
       heroSub: "Accès anticipé · Tarif fondateur · Aucune carte requise",
       painTitle: "Vous reconnaissez-vous ici?",
@@ -59,9 +59,33 @@ export default function Home() {
           desc: "SMS et emails automatiques pour les confirmations, rappels et suivis. Zéro effort manuel.",
         },
       ],
+      phase2Title: "Ce qui s'en vient 🚀",
+      phase2Subtitle: "On construit la clinique du futur. Voici ce qui arrive en Phase 2.",
+      phase2Features: [
+        {
+          icon: "🎙️",
+          title: "Agent vocal IA",
+          desc: "Un agent IA répond aux appels entrants 24h/24, prend les rendez-vous et répond aux questions — sans réceptionniste.",
+        },
+        {
+          icon: "📝",
+          title: "Notes SOAP assistées par IA",
+          desc: "Le praticien parle, NeoCliniQ rédige. Les notes cliniques se génèrent automatiquement pendant la consultation.",
+        },
+        {
+          icon: "📋",
+          title: "Liste d'attente intelligente",
+          desc: "Un rendez-vous se libère? Le système comble automatiquement la case avec le prochain patient sur la liste.",
+        },
+        {
+          icon: "📊",
+          title: "Rapports & revenus avancés",
+          desc: "Tableaux de bord en temps réel, analyse des revenus par praticien, tendances et projections — tout automatisé.",
+        },
+      ],
       founderTitle: "Offre fondateur",
       founderDesc:
-        "Les 50 premières cliniques sur liste d'attente obtiennent un tarif fondateur à vie — 50% de réduction permanente sur le prix de lancement, plus un accès prioritaire et un onboarding personnalisé 1-à-1 avec Alex.",
+        "Les 50 premières cliniques sur liste d'attente obtiennent un tarif fondateur à vie — 20% de réduction permanente sur le prix de lancement, plus un accès prioritaire et un onboarding personnalisé 1-à-1.",
       formTitle: "Rejoindre la liste d'attente",
       firstName: "Prénom",
       lastName: "Nom",
@@ -81,9 +105,9 @@ export default function Home() {
       nav: "NeoCliniQ",
       langToggle: "FR",
       heroTag: "Coming Soon",
-      heroTitle: "Clinic management your patients deserve.",
+      heroTitle: "Take back control of your time. NeoCliniQ handles the rest.",
       heroSubtitle:
-        "Replace GoRendezvous with a platform built for the AI era. Faster. Simpler. Designed for how you actually work.",
+        "No more end-of-day catch-up on files. NeoCliniQ automates the admin so you can focus on what truly matters — your patients.",
       heroCta: "Join the waitlist",
       heroSub: "Early access · Founding member pricing · No card required",
       painTitle: "Does this sound familiar?",
@@ -122,9 +146,33 @@ export default function Home() {
           desc: "Automatic SMS and emails for confirmations, reminders and follow-ups. Zero manual effort.",
         },
       ],
+      phase2Title: "What's coming 🚀",
+      phase2Subtitle: "We're building the clinic of the future. Here's what's arriving in Phase 2.",
+      phase2Features: [
+        {
+          icon: "🎙️",
+          title: "Voice AI agent",
+          desc: "An AI agent answers inbound calls 24/7, books appointments and answers questions — no receptionist needed.",
+        },
+        {
+          icon: "📝",
+          title: "AI-assisted SOAP notes",
+          desc: "The practitioner speaks, NeoCliniQ writes. Clinical notes are generated automatically during the consultation.",
+        },
+        {
+          icon: "📋",
+          title: "Smart waiting list",
+          desc: "A slot opens up? The system automatically fills it with the next patient on the waiting list.",
+        },
+        {
+          icon: "📊",
+          title: "Advanced reports & revenue",
+          desc: "Real-time dashboards, revenue analysis by practitioner, trends and projections — fully automated.",
+        },
+      ],
       founderTitle: "Founding member offer",
       founderDesc:
-        "The first 50 clinics on the waitlist get lifetime founding pricing — 50% off forever vs. launch price, plus priority access and a personalized 1-on-1 onboarding with Alex.",
+        "The first 50 clinics on the waitlist get lifetime founding pricing — 20% off forever vs. launch price, plus priority access and a personalized 1-on-1 onboarding.",
       formTitle: "Join the waitlist",
       firstName: "First name",
       lastName: "Last name",
@@ -173,7 +221,7 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-sm border-b border-white/5">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
           <span className="text-xl font-bold tracking-tight">
-            Neo<span className="text-[#00d4aa]">CliniQ</span>
+            Neo<span className="text-[#a855f7]">CliniQ</span>
           </span>
           <button
             onClick={() => setLang(lang === "fr" ? "en" : "fr")}
@@ -187,7 +235,7 @@ export default function Home() {
       {/* Hero */}
       <section className="pt-40 pb-24 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#00d4aa] bg-[#00d4aa]/10 border border-[#00d4aa]/20 rounded-full px-4 py-1.5 mb-6">
+          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#a855f7] bg-[#a855f7]/10 border border-[#a855f7]/20 rounded-full px-4 py-1.5 mb-6">
             {copy.heroTag}
           </span>
           <h1 className="text-4xl sm:text-6xl font-bold leading-tight tracking-tight mb-6">
@@ -198,7 +246,7 @@ export default function Home() {
           </p>
           <button
             onClick={scrollToForm}
-            className="bg-[#00d4aa] hover:bg-[#00bfa0] text-black font-bold px-8 py-4 rounded-xl text-base transition-all hover:scale-105 active:scale-95"
+            className="bg-[#a855f7] hover:bg-[#9333ea] text-white font-bold px-8 py-4 rounded-xl text-base transition-all hover:scale-105 active:scale-95"
           >
             {copy.heroCta}
           </button>
@@ -237,7 +285,7 @@ export default function Home() {
             {copy.solutions.map((sol, i) => (
               <div
                 key={i}
-                className="relative bg-white/[0.03] border border-[#00d4aa]/20 rounded-2xl p-6 hover:border-[#00d4aa]/50 transition-colors"
+                className="relative bg-white/[0.03] border border-[#a855f7]/20 rounded-2xl p-6 hover:border-[#a855f7]/50 transition-colors"
               >
                 <div className="text-3xl mb-4">{sol.icon}</div>
                 <h3 className="font-semibold text-white mb-2">{sol.title}</h3>
@@ -248,9 +296,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Phase 2 Coming Soon */}
+      <section className="py-20 px-6 bg-white/[0.02] border-y border-white/5">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white/90 mb-3">{copy.phase2Title}</h2>
+            <p className="text-white/50 max-w-xl mx-auto">{copy.phase2Subtitle}</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {copy.phase2Features.map((feat, i) => (
+              <div
+                key={i}
+                className="bg-white/[0.03] border border-[#a855f7]/15 rounded-2xl p-6 relative overflow-hidden"
+              >
+                <div className="absolute top-3 right-3">
+                  <span className="text-[10px] font-semibold tracking-widest uppercase text-[#a855f7]/60 bg-[#a855f7]/10 rounded-full px-2 py-0.5">
+                    Phase 2
+                  </span>
+                </div>
+                <div className="text-3xl mb-4">{feat.icon}</div>
+                <h3 className="font-semibold text-white mb-2">{feat.title}</h3>
+                <p className="text-white/40 text-sm leading-relaxed">{feat.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Founder Offer */}
       <section className="py-16 px-6">
-        <div className="max-w-2xl mx-auto bg-gradient-to-br from-[#00d4aa]/10 to-transparent border border-[#00d4aa]/25 rounded-3xl p-8 sm:p-10 text-center">
+        <div className="max-w-2xl mx-auto bg-gradient-to-br from-[#a855f7]/10 to-transparent border border-[#a855f7]/25 rounded-3xl p-8 sm:p-10 text-center">
           <div className="text-3xl mb-4">🏆</div>
           <h2 className="text-xl sm:text-2xl font-bold mb-4">{copy.founderTitle}</h2>
           <p className="text-white/60 leading-relaxed">{copy.founderDesc}</p>
@@ -263,7 +338,7 @@ export default function Home() {
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10">{copy.formTitle}</h2>
 
           {status === "success" ? (
-            <div className="bg-[#00d4aa]/10 border border-[#00d4aa]/30 rounded-2xl p-8 text-center">
+            <div className="bg-[#a855f7]/10 border border-[#a855f7]/30 rounded-2xl p-8 text-center">
               <div className="text-4xl mb-4">🎉</div>
               <h3 className="font-bold text-xl mb-2">{copy.successTitle}</h3>
               <p className="text-white/60">{copy.successDesc}</p>
@@ -278,7 +353,7 @@ export default function Home() {
                     required
                     value={form.firstName}
                     onChange={(e) => setForm({ ...form, firstName: e.target.value })}
-                    className="w-full bg-white/[0.05] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-[#00d4aa]/50 transition-colors"
+                    className="w-full bg-white/[0.05] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-[#a855f7]/50 transition-colors"
                   />
                 </div>
                 <div>
@@ -288,7 +363,7 @@ export default function Home() {
                     required
                     value={form.lastName}
                     onChange={(e) => setForm({ ...form, lastName: e.target.value })}
-                    className="w-full bg-white/[0.05] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-[#00d4aa]/50 transition-colors"
+                    className="w-full bg-white/[0.05] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-[#a855f7]/50 transition-colors"
                   />
                 </div>
               </div>
@@ -299,7 +374,7 @@ export default function Home() {
                   required
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className="w-full bg-white/[0.05] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-[#00d4aa]/50 transition-colors"
+                  className="w-full bg-white/[0.05] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-[#a855f7]/50 transition-colors"
                 />
               </div>
               <div>
@@ -309,7 +384,7 @@ export default function Home() {
                   required
                   value={form.phone}
                   onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                  className="w-full bg-white/[0.05] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-[#00d4aa]/50 transition-colors"
+                  className="w-full bg-white/[0.05] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-[#a855f7]/50 transition-colors"
                 />
               </div>
               <div>
@@ -318,7 +393,7 @@ export default function Home() {
                   type="text"
                   value={form.clinicName}
                   onChange={(e) => setForm({ ...form, clinicName: e.target.value })}
-                  className="w-full bg-white/[0.05] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-[#00d4aa]/50 transition-colors"
+                  className="w-full bg-white/[0.05] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-[#a855f7]/50 transition-colors"
                 />
               </div>
               {status === "error" && (
@@ -327,7 +402,7 @@ export default function Home() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="w-full bg-[#00d4aa] hover:bg-[#00bfa0] disabled:opacity-50 text-black font-bold px-8 py-4 rounded-xl text-base transition-all hover:scale-[1.02] active:scale-95"
+                className="w-full bg-[#a855f7] hover:bg-[#9333ea] disabled:opacity-50 text-white font-bold px-8 py-4 rounded-xl text-base transition-all hover:scale-[1.02] active:scale-95"
               >
                 {status === "loading" ? copy.submitting : copy.submit}
               </button>
