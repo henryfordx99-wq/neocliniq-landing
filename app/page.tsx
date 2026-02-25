@@ -5,6 +5,10 @@ import { useState } from "react";
 const FOUNDER_TOTAL = 30;
 const FOUNDER_CLAIMED = 12;
 
+// ROI calc: ~20 min saved per patient per month (reminders + admin + rescheduling)
+const MIN_SAVED_PER_PATIENT = 20;
+const DEFAULT_PATIENTS = 60;
+
 export default function Home() {
   const [form, setForm] = useState({
     firstName: "",
@@ -15,6 +19,10 @@ export default function Home() {
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [lang, setLang] = useState<"fr" | "en">("fr");
+  const [roiPatients, setRoiPatients] = useState(DEFAULT_PATIENTS);
+
+  const roiHours = Math.round((roiPatients * MIN_SAVED_PER_PATIENT * 4) / 60);
+  const roiDays = (roiHours / 8).toFixed(1);
 
   const t = {
     fr: {
@@ -45,6 +53,11 @@ export default function Home() {
         },
       ],
       solutionTitle: "NeoCliniQ change la donne.",
+      roiTitle: "Combien de temps perdez-vous chaque mois?",
+      roiLabel: "Patients par semaine",
+      roiResult: (h: number, d: string) => `NeoCliniQ vous fait gagner ${h}h par mois — soit ${d} journées de travail.`,
+      roiSub: "Calculé sur : appels de rappel + administration + reprogrammation manuelle",
+      roiCta: "Récupérer ces heures →",
       solutions: [
         {
           icon: "⚡",
@@ -135,6 +148,11 @@ export default function Home() {
         },
       ],
       solutionTitle: "NeoCliniQ changes everything.",
+      roiTitle: "How much time are you losing every month?",
+      roiLabel: "Patients per week",
+      roiResult: (h: number, d: string) => `NeoCliniQ saves you ${h}h per month — that's ${d} full workdays.`,
+      roiSub: "Based on: reminder calls + admin + manual rescheduling per patient",
+      roiCta: "Reclaim those hours →",
       solutions: [
         {
           icon: "⚡",
@@ -301,6 +319,60 @@ export default function Home() {
                 <p className="text-white/50 text-sm leading-relaxed">{sol.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ROI Calculator */}
+      <section className="py-20 px-6">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-white/90">{copy.roiTitle}</h2>
+          <p className="text-white/40 text-sm mb-10">{copy.roiSub}</p>
+
+          <div className="bg-white/[0.03] border border-white/[0.08] rounded-3xl p-8 sm:p-10">
+            {/* Slider */}
+            <div className="mb-8">
+              <div className="flex justify-between items-end mb-3">
+                <label className="text-sm text-white/50">{copy.roiLabel}</label>
+                <span className="text-3xl font-black text-white">{roiPatients}</span>
+              </div>
+              <input
+                type="range"
+                min={10}
+                max={200}
+                step={5}
+                value={roiPatients}
+                onChange={(e) => setRoiPatients(Number(e.target.value))}
+                className="w-full h-2 rounded-full appearance-none cursor-pointer"
+                style={{
+                  background: `linear-gradient(to right, #a855f7 0%, #a855f7 ${((roiPatients - 10) / 190) * 100}%, rgba(255,255,255,0.1) ${((roiPatients - 10) / 190) * 100}%, rgba(255,255,255,0.1) 100%)`
+                }}
+              />
+              <div className="flex justify-between text-xs text-white/20 mt-2">
+                <span>10</span>
+                <span>200</span>
+              </div>
+            </div>
+
+            {/* Result */}
+            <div className="bg-gradient-to-br from-[#a855f7]/15 to-[#ec4899]/5 border border-[#a855f7]/30 rounded-2xl p-6 mb-6">
+              <div className="text-5xl font-black text-[#a855f7] mb-2">{roiHours}h</div>
+              <p className="text-white/80 font-medium">{copy.roiResult(roiHours, roiDays)}</p>
+            </div>
+
+            {/* Breakdown pills */}
+            <div className="flex flex-wrap justify-center gap-2 mb-8 text-xs text-white/40">
+              <span className="bg-white/[0.05] rounded-full px-3 py-1">📞 {Math.round(roiPatients * 8 * 4 / 60)}h {lang === "fr" ? "rappels" : "reminder calls"}</span>
+              <span className="bg-white/[0.05] rounded-full px-3 py-1">📋 {Math.round(roiPatients * 10 * 4 / 60)}h {lang === "fr" ? "administration" : "admin"}</span>
+              <span className="bg-white/[0.05] rounded-full px-3 py-1">🔄 {Math.round(roiPatients * 2.4 * 4 / 60)}h {lang === "fr" ? "reprogrammation" : "rescheduling"}</span>
+            </div>
+
+            <button
+              onClick={scrollToForm}
+              className="w-full bg-[#a855f7] hover:bg-[#9333ea] text-white font-bold px-8 py-4 rounded-xl text-base transition-all hover:scale-[1.02] active:scale-95"
+            >
+              {copy.roiCta}
+            </button>
           </div>
         </div>
       </section>
