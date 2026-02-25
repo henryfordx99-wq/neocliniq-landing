@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 
+const FOUNDER_TOTAL = 30;
+const FOUNDER_CLAIMED = 12;
+
 export default function Home() {
   const [form, setForm] = useState({
     firstName: "",
@@ -22,7 +25,7 @@ export default function Home() {
       heroSubtitle:
         "Fini les fins de journée à rattraper vos dossiers. NeoCliniQ automatise l'administratif pour que vous puissiez vous concentrer sur ce qui compte vraiment — vos patients.",
       heroCta: "Rejoindre la liste d'attente",
-      heroSub: "Accès anticipé · Tarif fondateur · Aucune carte requise",
+      heroSub: "Accès anticipé · 59$/mois à vie · Aucune carte requise",
       painTitle: "Vous reconnaissez-vous ici?",
       pains: [
         {
@@ -83,9 +86,12 @@ export default function Home() {
           desc: "Tableaux de bord en temps réel, analyse des revenus par praticien, tendances et projections — tout automatisé.",
         },
       ],
-      founderTitle: "Offre fondateur",
+      founderTitle: "Offre membre fondateur",
       founderDesc:
-        "Les 50 premières cliniques sur liste d'attente obtiennent un tarif fondateur à vie — 20% de réduction permanente sur le prix de lancement, plus un accès prioritaire et un onboarding personnalisé 1-à-1.",
+        "Seulement 30 places disponibles. Les membres fondateurs verrouillent leur tarif à 59$/mois pour toujours — peu importe ce que le prix atteint au lancement (99$/mois). Plus un accès prioritaire et un onboarding 1-à-1 personnalisé.",
+      founderSpots: "places réclamées",
+      founderUrgency: "Il ne reste que",
+      founderRemaining: "places disponibles.",
       formTitle: "Rejoindre la liste d'attente",
       firstName: "Prénom",
       lastName: "Nom",
@@ -109,7 +115,7 @@ export default function Home() {
       heroSubtitle:
         "No more end-of-day catch-up on files. NeoCliniQ automates the admin so you can focus on what truly matters — your patients.",
       heroCta: "Join the waitlist",
-      heroSub: "Early access · Founding member pricing · No card required",
+      heroSub: "Early access · $59/mo locked for life · No card required",
       painTitle: "Does this sound familiar?",
       pains: [
         {
@@ -172,7 +178,10 @@ export default function Home() {
       ],
       founderTitle: "Founding member offer",
       founderDesc:
-        "The first 50 clinics on the waitlist get lifetime founding pricing — 20% off forever vs. launch price, plus priority access and a personalized 1-on-1 onboarding.",
+        "Only 30 spots available. Founding members lock in $59/mo forever — no matter what the price reaches at launch ($99/mo). Plus priority access and a personalized 1-on-1 onboarding.",
+      founderSpots: "spots claimed",
+      founderUrgency: "Only",
+      founderRemaining: "spots left.",
       formTitle: "Join the waitlist",
       firstName: "First name",
       lastName: "Last name",
@@ -328,7 +337,38 @@ export default function Home() {
         <div className="max-w-2xl mx-auto bg-gradient-to-br from-[#a855f7]/10 to-transparent border border-[#a855f7]/25 rounded-3xl p-8 sm:p-10 text-center">
           <div className="text-3xl mb-4">🏆</div>
           <h2 className="text-xl sm:text-2xl font-bold mb-4">{copy.founderTitle}</h2>
-          <p className="text-white/60 leading-relaxed">{copy.founderDesc}</p>
+
+          {/* Pricing callout */}
+          <div className="flex items-center justify-center gap-4 my-6">
+            <div className="text-center">
+              <div className="text-4xl font-black text-[#a855f7]">$59<span className="text-lg font-semibold">/mo</span></div>
+              <div className="text-xs text-white/40 mt-1">{lang === "fr" ? "membres fondateurs" : "founding members"}</div>
+            </div>
+            <div className="text-white/20 text-3xl">→</div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white/30 line-through">$99<span className="text-base">/mo</span></div>
+              <div className="text-xs text-white/30 mt-1">{lang === "fr" ? "prix de lancement" : "launch price"}</div>
+            </div>
+          </div>
+
+          {/* Scarcity progress bar */}
+          <div className="mt-6 mb-4">
+            <div className="flex justify-between text-xs text-white/40 mb-2">
+              <span>{FOUNDER_CLAIMED} {copy.founderSpots}</span>
+              <span>{FOUNDER_TOTAL} {lang === "fr" ? "total" : "total"}</span>
+            </div>
+            <div className="w-full bg-white/[0.08] rounded-full h-3 overflow-hidden">
+              <div
+                className="bg-gradient-to-r from-[#a855f7] to-[#ec4899] h-3 rounded-full transition-all"
+                style={{ width: `${(FOUNDER_CLAIMED / FOUNDER_TOTAL) * 100}%` }}
+              />
+            </div>
+            <p className="text-[#a855f7] text-sm font-semibold mt-3">
+              ⚡ {copy.founderUrgency} {FOUNDER_TOTAL - FOUNDER_CLAIMED} {copy.founderRemaining}
+            </p>
+          </div>
+
+          <p className="text-white/50 text-sm leading-relaxed mt-4">{copy.founderDesc}</p>
         </div>
       </section>
 
