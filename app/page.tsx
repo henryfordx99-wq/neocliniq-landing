@@ -102,6 +102,8 @@ export default function Home() {
       founderTitle: "Offre membre fondateur",
       founderDesc:
         "Seulement 30 places disponibles. Les membres fondateurs verrouillent leur tarif à 59$/mois pour toujours — peu importe ce que le prix atteint au lancement (99$/mois). Plus un accès prioritaire et un onboarding 1-à-1 personnalisé.",
+      founderNote:
+        "Tarif fondateur de 59,99$/mois verrouillé à vie sur les fonctionnalités de base. Des frais d’utilisation peuvent s’appliquer pour les fonctionnalités propulsées par l’IA.",
       founderSpots: "places réclamées",
       founderUrgency: "Il ne reste que",
       founderRemaining: "places disponibles.",
@@ -197,6 +199,8 @@ export default function Home() {
       founderTitle: "Founding member offer",
       founderDesc:
         "Only 30 spots available. Founding members lock in $59/mo forever — no matter what the price reaches at launch ($99/mo). Plus priority access and a personalized 1-on-1 onboarding.",
+      founderNote:
+        "Founding price of $59.99/month locked forever on core features. Usage-based add-ons may apply for AI-powered features.",
       founderSpots: "spots claimed",
       founderUrgency: "Only",
       founderRemaining: "spots left.",
@@ -441,6 +445,7 @@ export default function Home() {
           </div>
 
           <p className="text-white/50 text-sm leading-relaxed mt-4">{copy.founderDesc}</p>
+          <p className="text-white/40 text-xs leading-relaxed mt-3 italic">{copy.founderNote}</p>
         </div>
       </section>
 
