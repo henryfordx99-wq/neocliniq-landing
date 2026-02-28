@@ -33,7 +33,7 @@ export default function Home() {
       heroSubtitle:
         "Fini les fins de journée à rattraper vos dossiers. NeoCliniQ automatise l'administratif pour que vous puissiez vous concentrer sur ce qui compte vraiment — vos patients.",
       heroCta: "Rejoindre la liste d'attente",
-      heroSub: "Accès anticipé · 59$/mois à vie · Aucune carte requise",
+      heroSub: "Accès anticipé · À partir de 59$/mois à vie · Aucune carte requise",
       painTitle: "Vous reconnaissez-vous ici?",
       pains: [
         {
@@ -101,9 +101,9 @@ export default function Home() {
       ],
       founderTitle: "Offre membre fondateur",
       founderDesc:
-        "Seulement 30 places disponibles. Les membres fondateurs verrouillent leur tarif à 59$/mois pour toujours — peu importe ce que le prix atteint au lancement (99$/mois). Plus un accès prioritaire et un onboarding 1-à-1 personnalisé.",
+        "Seulement 30 places disponibles. Les membres fondateurs verrouillent leur tarif à 59$/mois (+ 15$/mois par praticien supplémentaire) pour toujours — peu importe ce que le prix atteint au lancement (99$/mois + 25$/praticien). Comptes admin et réceptionniste inclus gratuitement. Plus un accès prioritaire et un onboarding 1-à-1 personnalisé.",
       founderNote:
-        "Tarif fondateur de 59,99$/mois verrouillé à vie sur les fonctionnalités de base. Des frais d’utilisation peuvent s’appliquer pour les fonctionnalités propulsées par l’IA.",
+        "Tarif fondateur de 59,99$/mois (1 praticien inclus) + 15$/mois par praticien supplémentaire, verrouillé à vie. Des frais d’utilisation peuvent s’appliquer pour les fonctionnalités propulsées par l’IA.",
       founderSpots: "places réclamées",
       founderUrgency: "Il ne reste que",
       founderRemaining: "places disponibles.",
@@ -130,7 +130,7 @@ export default function Home() {
       heroSubtitle:
         "No more end-of-day catch-up on files. NeoCliniQ automates the admin so you can focus on what truly matters — your patients.",
       heroCta: "Join the waitlist",
-      heroSub: "Early access · $59/mo locked for life · No card required",
+      heroSub: "Early access · Starting at $59/mo locked for life · No card required",
       painTitle: "Does this sound familiar?",
       pains: [
         {
@@ -198,9 +198,9 @@ export default function Home() {
       ],
       founderTitle: "Founding member offer",
       founderDesc:
-        "Only 30 spots available. Founding members lock in $59/mo forever — no matter what the price reaches at launch ($99/mo). Plus priority access and a personalized 1-on-1 onboarding.",
+        "Only 30 spots available. Founding members lock in $59/mo (+ $15/mo per additional practitioner) forever — no matter what the price reaches at launch ($99/mo + $25/practitioner). Admin and receptionist accounts always free. Plus priority access and a personalized 1-on-1 onboarding.",
       founderNote:
-        "Founding price of $59.99/month locked forever on core features. Usage-based add-ons may apply for AI-powered features.",
+        "Founding price of $59.99/month (1 practitioner included) + $15/month per additional practitioner, locked forever. Usage-based add-ons may apply for AI-powered features.",
       founderSpots: "spots claimed",
       founderUrgency: "Only",
       founderRemaining: "spots left.",
@@ -418,11 +418,13 @@ export default function Home() {
           <div className="flex items-center justify-center gap-4 my-6">
             <div className="text-center">
               <div className="text-4xl font-black text-[#a855f7]">$59<span className="text-lg font-semibold">/mo</span></div>
+              <div className="text-xs text-[#a855f7]/60 mt-1">+ $15/mo {lang === "fr" ? "par praticien supp." : "per extra practitioner"}</div>
               <div className="text-xs text-white/40 mt-1">{lang === "fr" ? "membres fondateurs" : "founding members"}</div>
             </div>
             <div className="text-white/20 text-3xl">→</div>
             <div className="text-center">
               <div className="text-3xl font-bold text-white/30 line-through">$99<span className="text-base">/mo</span></div>
+              <div className="text-xs text-white/20 mt-1">+ $25/mo {lang === "fr" ? "par praticien supp." : "per extra practitioner"}</div>
               <div className="text-xs text-white/30 mt-1">{lang === "fr" ? "prix de lancement" : "launch price"}</div>
             </div>
           </div>
