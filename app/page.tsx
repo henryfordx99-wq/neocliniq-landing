@@ -252,7 +252,7 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-sm border-b border-white/5">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
           <span className="text-xl font-bold tracking-tight">
-            Neo<span className="text-[#a855f7]">CliniQ</span>
+            Neo<span className="text-[#a855f7]">Cliniq</span>
           </span>
           <button
             onClick={() => setLang(lang === "fr" ? "en" : "fr")}
