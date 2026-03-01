@@ -26,12 +26,12 @@ export default function Home() {
 
   const t = {
     fr: {
-      nav: "NeoCliniQ",
+      nav: "NeoCliniq",
       langToggle: "EN",
       heroTag: "Bientôt disponible",
-      heroTitle: "Reprenez le contrôle de votre temps. NeoCliniQ s'occupe du reste.",
+      heroTitle: "Reprenez le contrôle de votre temps. NeoCliniq s'occupe du reste.",
       heroSubtitle:
-        "Fini les fins de journée à rattraper vos dossiers. NeoCliniQ automatise l'administratif pour que vous puissiez vous concentrer sur ce qui compte vraiment — vos patients.",
+        "Fini les fins de journée à rattraper vos dossiers. NeoCliniq automatise l'administratif pour que vous puissiez vous concentrer sur ce qui compte vraiment — vos patients.",
       heroCta: "Rejoindre la liste d'attente",
       heroSub: "Accès anticipé · À partir de 59$/mois à vie · Aucune carte requise",
       painTitle: "Vous reconnaissez-vous ici?",
@@ -52,10 +52,10 @@ export default function Home() {
           desc: "Les confirmations et rappels de rendez-vous prennent des heures de temps administratif chaque semaine.",
         },
       ],
-      solutionTitle: "NeoCliniQ change la donne.",
+      solutionTitle: "NeoCliniq change la donne.",
       roiTitle: "Combien de temps perdez-vous chaque mois?",
       roiLabel: "Patients par semaine",
-      roiResult: (h: number, d: string) => `NeoCliniQ vous fait gagner ${h}h par mois — soit ${d} journées de travail.`,
+      roiResult: (h: number, d: string) => `NeoCliniq vous fait gagner ${h}h par mois — soit ${d} journées de travail.`,
       roiSub: "Calculé sur : appels de rappel + administration + reprogrammation manuelle",
       roiCta: "Récupérer ces heures →",
       solutions: [
@@ -86,7 +86,7 @@ export default function Home() {
         {
           icon: "📝",
           title: "Notes SOAP assistées par IA",
-          desc: "Le praticien parle, NeoCliniQ rédige. Les notes cliniques se génèrent automatiquement pendant la consultation.",
+          desc: "Le praticien parle, NeoCliniq rédige. Les notes cliniques se génèrent automatiquement pendant la consultation.",
         },
         {
           icon: "📋",
@@ -117,18 +117,18 @@ export default function Home() {
       submitting: "Envoi...",
       successTitle: "Vous êtes sur la liste! 🎉",
       successDesc:
-        "Merci! Vous serez parmi les premiers à accéder à NeoCliniQ. On vous contacte bientôt.",
+        "Merci! Vous serez parmi les premiers à accéder à NeoCliniq. On vous contacte bientôt.",
       errorMsg: "Une erreur s'est produite. Veuillez réessayer.",
-      footerText: "© 2026 NeoCliniQ · Quebec, Canada",
+      footerText: "© 2026 NeoCliniq · Quebec, Canada",
       footerSub: "Construit pour les chiropraticiens. Conçu au Québec.",
     },
     en: {
-      nav: "NeoCliniQ",
+      nav: "NeoCliniq",
       langToggle: "FR",
       heroTag: "Coming Soon",
-      heroTitle: "Take back control of your time. NeoCliniQ handles the rest.",
+      heroTitle: "Take back control of your time. NeoCliniq handles the rest.",
       heroSubtitle:
-        "No more end-of-day catch-up on files. NeoCliniQ automates the admin so you can focus on what truly matters — your patients.",
+        "No more end-of-day catch-up on files. NeoCliniq automates the admin so you can focus on what truly matters — your patients.",
       heroCta: "Join the waitlist",
       heroSub: "Early access · Starting at $59/mo locked for life · No card required",
       painTitle: "Does this sound familiar?",
@@ -149,10 +149,10 @@ export default function Home() {
           desc: "Appointment confirmations and reminders eat hours of admin time every single week.",
         },
       ],
-      solutionTitle: "NeoCliniQ changes everything.",
+      solutionTitle: "NeoCliniq changes everything.",
       roiTitle: "How much time are you losing every month?",
       roiLabel: "Patients per week",
-      roiResult: (h: number, d: string) => `NeoCliniQ saves you ${h}h per month — that's ${d} full workdays.`,
+      roiResult: (h: number, d: string) => `NeoCliniq saves you ${h}h per month — that's ${d} full workdays.`,
       roiSub: "Based on: reminder calls + admin + manual rescheduling per patient",
       roiCta: "Reclaim those hours →",
       solutions: [
@@ -183,7 +183,7 @@ export default function Home() {
         {
           icon: "📝",
           title: "AI-assisted SOAP notes",
-          desc: "The practitioner speaks, NeoCliniQ writes. Clinical notes are generated automatically during the consultation.",
+          desc: "The practitioner speaks, NeoCliniq writes. Clinical notes are generated automatically during the consultation.",
         },
         {
           icon: "📋",
@@ -214,9 +214,9 @@ export default function Home() {
       submitting: "Sending...",
       successTitle: "You're on the list! 🎉",
       successDesc:
-        "Thank you! You'll be among the first to access NeoCliniQ. We'll be in touch soon.",
+        "Thank you! You'll be among the first to access NeoCliniq. We'll be in touch soon.",
       errorMsg: "Something went wrong. Please try again.",
-      footerText: "© 2026 NeoCliniQ · Quebec, Canada",
+      footerText: "© 2026 NeoCliniq · Quebec, Canada",
       footerSub: "Built for chiropractors. Made in Quebec.",
     },
   };
