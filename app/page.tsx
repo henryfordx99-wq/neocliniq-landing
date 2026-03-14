@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 const FOUNDER_TOTAL = 30;
 const FOUNDER_CLAIMED = 12;
@@ -251,9 +252,17 @@ export default function Home() {
       {/* Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-sm border-b border-white/5">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="text-xl font-bold tracking-tight">
-            Neo<span className="text-[#a855f7]">Cliniq</span>
-          </span>
+          <div className="flex items-center gap-6">
+            <span className="text-xl font-bold tracking-tight">
+              Neo<span className="text-[#a855f7]">Cliniq</span>
+            </span>
+            <Link
+              href="/comparison"
+              className="text-sm text-white/50 hover:text-[#a855f7] transition-colors hidden sm:inline"
+            >
+              {lang === "fr" ? "Comparer" : "Compare"}
+            </Link>
+          </div>
           <button
             onClick={() => setLang(lang === "fr" ? "en" : "fr")}
             className="text-sm text-white/50 hover:text-white transition-colors border border-white/10 rounded px-3 py-1"
