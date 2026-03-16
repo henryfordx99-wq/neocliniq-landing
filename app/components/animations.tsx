@@ -32,16 +32,19 @@ export function RevealSection({
   children,
   className = "",
   delay = 0,
+  id,
 }: {
   children: React.ReactNode;
   className?: string;
   delay?: number;
+  id?: string;
 }) {
   const { ref, isVisible } = useScrollReveal();
 
   return (
     <div
       ref={ref}
+      id={id}
       className={className}
       style={{
         opacity: isVisible ? 1 : 0,
